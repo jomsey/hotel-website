@@ -1,4 +1,5 @@
 {
+  "siteName":"The Panorama Hotel",
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]

@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h2 {
+    @apply sm:text-4xl text-2xl font-bold mb-10;
+    position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h2::after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background-color: #121212ef
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+p {
+    @apply leading-8 text-sm text-pretty;
 }
+
+.lg-react-element {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr;
+    gap: 20px;
+    height: 75vh;
+}
+
+.lg-react-element img {
+    cursor: pointer;
+    position: relative;
+}
+
+.hover {}
